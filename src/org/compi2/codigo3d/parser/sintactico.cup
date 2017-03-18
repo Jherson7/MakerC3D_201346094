@@ -39,7 +39,7 @@ precedence right POT;
 
 start with inicial;
 
-inicial ::= {: ControlC3D.reiniciar(); :}R:a{:System.out.println(a.geteFalse()+":\n");System.out.println(a.geteTrue()+":\n");:};
+inicial ::= {: ControlC3D.reiniciar(); :}R:a{:System.out.println(a.geteTrue()+":\n");System.out.println(a.geteFalse()+":\n");:};
 
 R::=  R:a1 OR{: 
                 if(a1.geteTrue().equals("")){
