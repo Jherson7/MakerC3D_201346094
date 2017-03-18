@@ -629,6 +629,7 @@ class CUP$parser$actions {
                     a1.seteTrue(ControlC3D.generaEti());
                     a1.seteFalse(ControlC3D.generaEti());
                     System.out.println(ControlC3D.getC3D());
+                    ControlC3D.concatLabel(ControlC3D.getC3D());
                     a1.imprimirIF(a1.retonarC3D(),a1.geteTrue(),a1.geteFalse());
                 }
                     
@@ -650,8 +651,12 @@ class CUP$parser$actions {
 		int aleft = ((java_cup.runtime.Symbol)CUP$parser$stack.peek()).left;
 		int aright = ((java_cup.runtime.Symbol)CUP$parser$stack.peek()).right;
 		Etiquetas a = (Etiquetas)((java_cup.runtime.Symbol) CUP$parser$stack.peek()).value;
-		ControlC3D.concatLabel(a.geteFalse()+":\n");
+		
+                ControlC3D.concatLabel("ETI V: ");
                 ControlC3D.concatLabel(a.geteTrue()+":\n");
+                ControlC3D.concatLabel("ETI F: ");
+                ControlC3D.concatLabel(a.geteFalse()+":\n");
+                
                 System.out.println(a.geteFalse()+":\n");
                 System.out.println(a.geteTrue()+":\n");
               CUP$parser$result = parser.getSymbolFactory().newSymbol("inicial",0, ((java_cup.runtime.Symbol)CUP$parser$stack.elementAt(CUP$parser$top-1)), ((java_cup.runtime.Symbol)CUP$parser$stack.peek()), RESULT);
@@ -689,4 +694,3 @@ class CUP$parser$actions {
         }
     }
 }
-
