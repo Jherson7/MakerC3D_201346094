@@ -2,7 +2,7 @@
 
 /**
  *
- * @author esvux
+ * @author jherson
  */
 public class ControlC3D {
     
